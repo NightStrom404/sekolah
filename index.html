@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMK BOKEP INDONESIA</title>
+  <style>
+    :root {
+      --bg: #0b3861;
+      --bg-alt: #0f4f8a;
+      --surface: #ffffff;
+      --surface-soft: #f7fbff;
+      --primary: #f2a300;
+      --text: #12233b;
+      --text-light: #4b6177;
+      --shadow: rgba(0, 0, 0, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: linear-gradient(180deg, #eef5ff 0%, #f7fbff 48%, #ffffff 100%);
+      color: var(--text);
+    }
+;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(18, 35, 59, 0.08);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .brand span {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--primary);
+      color: white;
+      font-weight: 800;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .hero-copy {
+      padding: 1rem 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center
+      gap: 0.6rem;
+      color: var(--primary);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(2.8rem, 5vw, 4.4rem);
+      margin: 1rem 0 1rem;
+      line-height: 1.02;
+    }
+
+    .hero-copy p {
+      max-width: 600px;
+      margin-bottom: 1.8rem;
+      color: var(--text-light);
+      font-size: 1rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 18px 40px rgba(242, 163, 0, 0.2);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--text);
+      border: 1px solid rgba(18, 35, 59, 0.1);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-image {
+      position: relative;
+      min-height: 420px;
+      border-radius: 32px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(11, 57, 113, 0.85), rgba(4, 18, 49, 0.95)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80') center / cover no-repeat;
+      box-shadow: 0 35px 120px rgba(11, 29, 67, 0.14);
+    }
+
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(242, 163, 0, 0.22), transparent 30%);
+    }
+
+    .hero-card {
+      position: absolute;
+      left: 1.5rem;
+      bottom: 1.5rem;
+      padding: 1.6rem;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: white;
+      max-width: 420px;
+    }
+
+    .hero-card h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.6rem;
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: #e7eefc;
+      font-size: 0.98rem;
+    }
+
+    .badges {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.4rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.85rem 0.95rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.2);
+      font-size: 0.95rem;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    .section {
+      margin-top: 3.5rem;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--text-light);
+      max-width: 620px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card-box {
+      background: white;
+      border-radius: 26px;
+      padding: 1.8rem;
+      box-shadow: 0 18px 40px rgba(16, 52, 98, 0.08);
+      border: 1px solid rgba(18, 35, 59, 0.05);
+    }
+
+    .card-box h3 {
+      margin: 0 0 0.9rem;
+      font-size: 1.1rem;
+    }
+
+    .card-box p {
+      margin: 0;
+      color: var(--text-light);
+      font-size: 0.96rem;
+    }
+
+    .cards-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .program-card,
+    .news-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(16, 52, 98, 0.08);
+      border: 1px solid rgba(18, 35, 59, 0.05);
+      display: flex;
+      flex-direction: column;
+      min-height: 320px;
+    }
+
+    .program-card img,
+    .news-card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+
+    .program-card .content,
+    .news-card .content {
+      padding: 1.4rem;
+      flex: 1;
+    }
+
+    .program-card h4,
+    .news-card h4 {
+      margin: 0 0 0.85rem;
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+
+    .program-card p,
+    .news-card p {
+      margin: 0;
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    .program-card a,
+    .news-card a {
+      display: inline-flex;
+      margin-top: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .stat-card {
+      background: linear-gradient(180deg, #fff 0%, #f7faff 100%);
+      border-radius: 26px;
+      padding: 1.5rem;
+      border: 1px solid rgba(18, 35, 59, 0.08);
+      text-align: center;
+    }
+
+    .stat-card h3 {
+      margin: 0;
+      font-size: 2rem;
+      color: var(--text);
+    }
+
+    .stat-card p {
+      margin: 0.55rem 0 0;
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: var(--bg);
+      color: white;
+      padding: 3rem 1.5rem;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .footer-grid h4 {
+      margin-top: 0;
+      font-size: 1.05rem;
+    }
+
+    .footer-grid p,
+    .footer-grid li,
+    .footer-grid a {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.95rem;
+    }
+
+    .footer-grid ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.9rem 0 0;
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .footer-bottom {
+      margin-top: 2rem;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.92rem;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #25d366;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+      z-index: 80;
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp:hover {
+      transform: translateY(-4px);
+    }
+
+    .whatsapp svg {
+      width: 28px;
+      height: 28px;
+      fill: white;
+    }
+
+    @media (max-width: 1040px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-3,
+      .cards-row,
+      .stats,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        padding-top: 2rem;
+      }
+
+      .hero-copy h1 {
+        font-size: 2.4rem;
+      }
+
+      .nav-link {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="navbar">
+        <a href="#home" class="brand"><span>SMK</span>SMK BOKEP INDONESIA</a>
+        <nav>
+          <a class="nav-link" href="#about">Tentang</a>
+          <a class="nav-link" href="#jurusan">Jurusan</a>
+          <a class="nav-link" href="#prestasi">Prestasi</a>
+          <a class="nav-link" href="#artikel">Artikel</a>
+          <a class="nav-link" href="#kontak">Kontak</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow">SMK BOKEP INDONESIA</div>
+        <h1>Cakap, Kreatif, dan Proaktif</h1>
+        <p>SMK BOKEP INDONESIA adalah sekolah menengah kejuruan unggulan dengan 12 jurusan kompeten dan fasilitas modern untuk membentuk generasi siap kerja.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://smkbokepindonesia.my.id">Informasi SPMB Online</a>
+          <a class="btn btn-secondary" href="#jurusan">Lihat Jurusan</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-card">
+          <h2>Visi CAKEP</h2>
+          <p>Cakap, Kreatif, dan Proaktif menjadi dasar pembelajaran agar siswa memiliki kompetensi unggul dan siap menghadapi dunia industri.</p>
+          <div class="badges">
+            <span class="badge">SMK BISA NGEWE</span>
+            <span class="badge">Terakreditasi A</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="section" id="about">
+        <div class="section-head">
+          <div>
+            <h2>Keunggulan Sekolah Kami</h2>
+            <p>Sekolah terus melakukan perbaikan dari segi pembelajaran dan fasilitas untuk meningkatkan kualitas sumber daya manusia.</p>
+          </div>
+        </div>
+        <div class="grid-3">
+          <div class="card-box">
+            <h3>Sekolah Berbasis Teknologi</h3>
+            <p>Pembelajaran modern berbasis teknologi membuat siswa lebih kreatif dan aktif selama proses pendidikan.</p>
+          </div>
+          <div class="card-box">
+            <h3>Terakreditasi A</h3>
+            <p>Kualitas pembelajaran dan manajemen sekolah diakui dengan akreditasi A sebagai standar pendidikan tinggi.</p>
+          </div>
+          <div class="card-box">
+            <h3>Tagline CAKEP</h3>
+            <p>CAKEP adalah singkatan dari Cakap, Kreatif, dan Proaktif, nilai utama yang memandu aktivitas sekolah.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="jurusan">
+        <div class="section-head">
+          <div>
+            <h2>Jurusan Tersedia</h2>
+            <p>Kami memiliki 12 jurusan dengan pembimbing berkompeten dan fasilitas lengkap untuk setiap bidang keahlian.</p>
+          </div>
+        </div>
+        <div class="cards-row">
+          <article class="program-card">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Administrasi Perkantoran">
+            <div class="content">
+              <h4>Administrasi Perkantoran</h4>
+              <p>Pembelajaran fokus pada manajemen kantor, dokumen, dan layanan administrasi profesional.</p>
+              <a href="#">Selengkapnya →</a>
+            </div>
+          </article>
+          <article class="program-card">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Teknik Sepeda Motor">
+            <div class="content">
+              <h4>Teknik Sepeda Motor</h4>
+              <p>Jurusan teknik motor dengan praktik bengkel modern dan pelatihan servis kendaraan bermotor.</p>
+              <a href="#">Selengkapnya →</a>
+            </div>
+          </article>
+          <article class="program-card">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Teknik Komputer dan Jaringan">
+            <div class="content">
+              <h4>Teknik Komputer dan Jaringan</h4>
+              <p>Materi jaringan, perangkat keras, dan sistem informasi untuk persiapan karir IT.</p>
+              <a href="#">Selengkapnya →</a>
+            </div>
+          </article>
+          <article class="program-card">
+            <img src="https://images.unsplash.com/photo-1521737604893-7986c2920216?auto=format&fit=crop&w=800&q=80" alt="Desain Komunikasi Visual">
+            <div class="content">
+              <h4>Desain Komunikasi Visual</h4>
+              <p>Jurusan kreatif yang mengajarkan desain grafis, multimedia, dan komunikasi visual modern.</p>
+              <a href="#">Selengkapnya →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="prestasi">
+        <div class="section-head">
+          <div>
+            <h2>Prestasi</h2>
+            <p>Prestasi siswa SMK PIRI 1 Jogja yang terus berprestasi di tingkat nasional dan regional.</p>
+          </div>
+        </div>
+        <div class="cards-row">
+          <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80" alt="Prestasi Pencak Silat">
+            <div class="content">
+              <h4>Juara 3 Pencak Silat Pelajar Nasional 2025</h4>
+              <p>Prestasi seni bela diri yang membuktikan semangat atlet SMK PIRI 1 Jogja terus berkibar.</p>
+              <a href="#">Baca selengkapnya →</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1532074205216-d0e1f4b19d9a?auto=format&fit=crop&w=800&q=80" alt="Prestasi Autokhana">
+            <div class="content">
+              <h4>Juara 2 Kompetisi Autokhana Nasional 2024</h4>
+              <p>Tim otomotif siswa meraih juara dengan kemampuan teknis dan strategi berkendara yang kuat.</p>
+              <a href="#">Baca selengkapnya →</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80" alt="Prestasi Tae Kwon Do">
+            <div class="content">
+              <h4>Juara 2 Tae Kwon Do Kota Jogja 2024</h4>
+              <p>Prestasi olahraga yang menunjukkan disiplin dan kerja keras siswa dalam kompetisi bela diri.</p>
+              <a href="#">Baca selengkapnya →</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Prestasi Sekolah">
+            <div class="content">
+              <h4>Prestasi Akademik & Ekstrakurikuler</h4>
+              <p>SMK PIRI 1 Jogja mendukung prestasi akademik sekaligus kegiatan ekstrakurikuler siswa secara seimbang.</p>
+              <a href="#">Baca selengkapnya →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="statistik">
+        <div class="section-head">
+          <div>
+            <h2>Statistik Sekolah</h2>
+            <p>Informasi statistik keseluruhan dari sekolah kami untuk melihat kekuatan tenaga pendidik dan fasilitas.</p>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat-card">
+            <h3>74</h3>
+            <p>Guru & Karyawan</p>
+          </div>
+          <div class="stat-card">
+            <h3>588</h3>
+            <p>Siswa</p>
+          </div>
+          <div class="stat-card">
+            <h3>76</h3>
+            <p>Penghargaan</p>
+          </div>
+          <div class="stat-card">
+            <h3>30</h3>
+            <p>Kelas</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="artikel">
+        <div class="section-head">
+          <div>
+            <h2>Artikel Sekolah</h2>
+            <p>Baca kegiatan, info populer, dan berita menarik seputar sekolah kami.</p>
+          </div>
+        </div>
+        <div class="cards-row">
+          <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Hari Anti Kekerasan">
+            <div class="content">
+              <h4>Hari Anti Kekerasan 2025</h4>
+              <p>Kegiatan edukasi untuk menciptakan ruang yang aman dan bebas dari kekerasan terhadap perempuan dan anak.</p>
+              <a href="#">Baca selengkapnya →</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="LDK OSIS 2025">
+            <div class="content">
+              <h4>LDK OSIS 2025</h4>
+              <p>Latihan kepemimpinan OSIS untuk membentuk pemimpin berintegritas dan visioner.</p>
+              <a href="#">Baca selengkapnya →</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80" alt="Kunjungan Industri Bali">
+            <div class="content">
+              <h4>Kunjungan Industri ke Tuksedo Bali</h4>
+              <p>Siswa mengunjungi industri untuk memperkuat kompetensi dunia kerja dan kerjasama industri sekolah.</p>
+              <a href="#">Baca selengkapnya →</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Budaya Kamis Pon">
+            <div class="content">
+              <h4>Budaya Kamis Pon</h4>
+              <p>Siswa mengenakan pakaian adat Jawa setiap Kamis Pon sebagai bagian dari pelestarian budaya.</p>
+              <a href="#">Baca selengkapnya →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="kontak">
+      <div class="footer-grid">
+        <div>
+          <h4>Tentang SMK BOKEP INDONESIA</h4>
+          <p>SMK BOKEP INDONESIA adalah sekolah menengah kejuruan unggulan dengan tujuan mencetak siswa yang cakap, kreatif, dan proaktif.</p>
+        </div>
+        <div>
+          <h4>Kontak Kami</h4>
+          <ul>
+            <li>TELEGRAM: @cormentc2</li>
+            <li>TELEGRAM: @NightStrom308</li>
+            <li>Email: apekob@gmail.com</li>
+            <li>Alamat: Jl. JEPANG HOT</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Link Penting</h4>
+          <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#jurusan">Jurusan</a></li>
+            <li><a href="#prestasi">Prestasi</a></li>
+            <li><a href="#artikel">Artikel</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© CORMENT-C2 X NIGHT STROM 2026 SMK BOKEP INDONESIA. Semua hak cipta dilindungi.</div>
+    </footer>
+
+    <a class="whatsapp" href="https://t.me/cormentc2" target="_blank" rel="noreferrer" aria-label="Chat Whatsapp">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.148-1.758-.867-2.03-.967-.272-.099-.47-.148-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.148-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.52.149-.173.198-.297.298-.495.099-.198.05-.372-.025-.52-.074-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.066 2.876 1.213 3.074c.148.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.693.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12.004 2.003c-5.52 0-9.999 4.479-9.999 9.998 0 1.761.46 3.479 1.333 4.998L2 22l4.264-1.118c1.434.783 3.042 1.198 4.74 1.198 5.52 0 9.999-4.479 9.999-9.998S17.524 2.003 12.004 2.003zm0 18.477c-1.547 0-3.052-.403-4.355-1.166l-.312-.187-2.53.66.674-2.464-.203-.405a8.018 8.018 0 0 1-1.275-4.45c0-4.424 3.605-8.017 8.04-8.017 4.436 0 8.04 3.593 8.04 8.017s-3.604 8.017-8.04 8.017z"/>
+      </svg>
+    </a>
+  </div>
+</body>
+</html>
